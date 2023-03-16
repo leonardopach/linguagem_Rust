@@ -1,7 +1,6 @@
-fn tipos_de_dados() {
-    let guess: u32 = "42".parse().expect("Não é um número");
-    println!("{}", guess);
+fn outra_funcao() {
+    println!("Outra função");
 }
 fn main() {
-    tipos_de_dados();
+    outra_funcao();
 }
