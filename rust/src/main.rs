@@ -1,12 +1,26 @@
-fn controle_de_fluxo() {
-    let numero = 3;
+fn primeira_palavra(s: &String) -> &str {
+    let bytes = s.as_bytes();
 
-    if numero < 5 {
-        println!("condição era verdadeira");
-    } else {
-        println!("condição era falsa");
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
     }
+
+    &s[..]
 }
-fn main() {
-    controle_de_fluxo();
+
+fn slice() {
+    let string = String::from("Roberto da silva");
+
+    println!("{}", primeira_palavra(&string));
+    let valor = &string.as_bytes().len();
+    println!("{}", valor);
+
+    let nome = &string[0..7];
+    let sobrenome = &string[8..16];
+
+    println!("{}, {}", nome, sobrenome)
 }
+
+fn main() {}
