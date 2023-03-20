@@ -1,6 +1,12 @@
-fn outra_funcao() {
-    println!("Outra função");
+fn controle_de_fluxo() {
+    let numero = 3;
+
+    if numero < 5 {
+        println!("condição era verdadeira");
+    } else {
+        println!("condição era falsa");
+    }
 }
 fn main() {
-    outra_funcao();
+    controle_de_fluxo();
 }
