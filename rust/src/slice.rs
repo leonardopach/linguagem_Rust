@@ -10,7 +10,7 @@ fn primeira_palavra(s: &String) -> &str {
     &s[..]
 }
 
-fn slice() {
+pub fn slice() {
     let string = String::from("Roberto da silva");
 
     println!("{}", primeira_palavra(&string));
