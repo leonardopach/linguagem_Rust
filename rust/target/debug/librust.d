@@ -1,0 +1,1 @@
+/home/leonardopach/linguagem_Rust/rust/target/debug/librust.rlib: /home/leonardopach/linguagem_Rust/rust/src/lib.rs /home/leonardopach/linguagem_Rust/rust/src/network/mod.rs /home/leonardopach/linguagem_Rust/rust/src/network/server.rs
