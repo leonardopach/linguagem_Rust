@@ -14,7 +14,7 @@ fn outra_funcao3(x: i32, y: f64) {
 fn cinco() -> i32 {
     5
 }
-fn principal() {
+pub fn principal() {
     outra_funcao();
     outra_funcao1(12);
     println!();
