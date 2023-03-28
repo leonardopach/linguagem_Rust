@@ -18,4 +18,6 @@ pub fn error_print() {
             }
         },
     };
+
+    println!("{:?}", f);
 }
