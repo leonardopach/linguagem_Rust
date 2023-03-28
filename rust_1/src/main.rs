@@ -1,4 +1,4 @@
-mod structs;
+mod error;
 fn main() {
-    structs::structs_print();
+    error::error_print();
 }
