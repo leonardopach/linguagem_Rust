@@ -1,4 +1,4 @@
-mod error;
+mod lifetimes;
 fn main() {
-    error::error_print();
+    lifetimes::lifetime_print();
 }
