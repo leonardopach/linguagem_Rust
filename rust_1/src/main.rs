@@ -1,4 +1,4 @@
-mod lifetimes;
+mod cli_app;
 fn main() {
-    lifetimes::lifetime_print();
+    cli_app::cli_app();
 }

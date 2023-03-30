@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn lifetime_print() {
     let string1 = String::from("abcd");
 
@@ -6,8 +7,8 @@ pub fn lifetime_print() {
 
     println!("The longest string is {}", result);
 }
-
-fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+#[allow(dead_code)]
+pub fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
     if x.len() > y.len() {
         x
     } else {
