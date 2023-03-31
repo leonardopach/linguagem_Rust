@@ -1,4 +1,5 @@
 use std::env;
+use std::error::Error;
 use std::fs;
 use std::process;
 
@@ -13,19 +14,27 @@ pub fn cli_app() {
     println!("Searching for {}", config.filename);
     println!("{:?}", args);
 
-    let contents =
-        fs::read_to_string(config.filename).expect("Something went wrong reading the file");
-
-    println!("With text:\n {}", contents);
+    if let Err(e) = run(config) {
+        println!("Application error: {}", e);
+        process::exit(1);
+    }
 }
 
-struct Config {
-    query: String,
-    filename: String,
+pub fn run(config: Config) -> Result<(), Box<dyn Error>> {
+    let contents = fs::read_to_string(config.filename)?;
+
+    println!("With text:\n {}", contents);
+
+    Ok(())
+}
+
+pub struct Config {
+    pub query: String,
+    pub filename: String,
 }
 
 impl Config {
-    fn new(args: &[String]) -> Result<Config, &str> {
+    pub fn new(args: &[String]) -> Result<Config, &str> {
         if args.len() < 3 {
             return Err("not enough arguments");
         }

@@ -2,6 +2,7 @@ pub fn add_two(a: i32) -> i32 {
     a + 2
 }
 
+pub mod cli_app;
 mod lifetimes;
 
 pub fn greeting(name: &str) -> String {
