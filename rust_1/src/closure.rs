@@ -1,7 +1,7 @@
 pub fn closures() {
     let sum = |x: i32, y: i32| x + y;
 
-    println!("{}", sum(10, 2));
+    println!("the sum of 10 + 2 is: {}", sum(10, 2));
     let is_even = |num: i32| -> bool { num % 2 == 0 };
 
     let print_numbers_to = |x: i32| {
@@ -11,6 +11,13 @@ pub fn closures() {
             }
         }
     };
-
     print_numbers_to(20);
+
+    let x = 4;
+
+    let equal_to_x = |z: i32| z == x;
+
+    let y = 4;
+
+    assert!(equal_to_x(y));
 }

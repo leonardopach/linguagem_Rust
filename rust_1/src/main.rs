@@ -1,1 +1,5 @@
-fn main() {}
+mod iterator;
+
+fn main() {
+    iterator::iterator_print();
+}
