@@ -1,10 +1,25 @@
+//! # My Crate
+//!
+//! `my_crate` is a collection of utilities to make performing certain
+//! calculations more convenient
+
+/// Adds one to the number given
+///
+/// # Examples
+///
+/// ```
+/// let arg = 5;
+/// let answer = rust_1::add_one(arg);
+///
+/// assert_eq!(6, answer);
+/// ```
 pub fn add_two(a: i32) -> i32 {
     a + 2
 }
 
 pub mod cli_app;
 mod lifetimes;
-
+/// Returns a greeting with the name of the person
 pub fn greeting(name: &str) -> String {
     format!("hello, {}", name)
 }

@@ -1,5 +1,6 @@
-mod iterator;
+mod api;
 
+use api::api::*;
 fn main() {
-    iterator::iterator_print();
+    print_api();
 }

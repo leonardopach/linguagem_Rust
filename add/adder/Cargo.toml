@@ -1,10 +1,9 @@
 [package]
-name = "rust_1"
+name = "adder"
 version = "0.1.0"
-authors = ["leonardoPach", "Leo <pachecodossantos17@gmail.com>"]
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-actix-web = "4.3.1"
+add-one = {path = "../add-one"}
