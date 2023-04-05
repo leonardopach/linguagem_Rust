@@ -1,6 +1,10 @@
-mod api;
+fn main() {}
 
-use api::api::*;
-fn main() {
-    print_api();
+#[test]
+fn testar() {
+    let x = 5;
+    let y = &x;
+
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
 }
