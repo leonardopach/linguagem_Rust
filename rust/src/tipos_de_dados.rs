@@ -39,6 +39,7 @@ pub fn tipos_de_dados() {
 
     println!("{} {} {}", c, z, heart_eyed_cat);
 
+    // tipos compostos
     let tup: (i32, f64, u8) = (500, 6.4, 1);
 
     println!("{:?}", tup);
@@ -60,9 +61,26 @@ pub fn tipos_de_dados() {
     let um = x.2;
     println!("{}", um);
 
+    // array
     let a = [1, 2, 3, 4, 5];
-    println!("{:?}", a);
+    println!("{:a}",);
 
     let primeiro = a[0];
     println!("{}", primeiro);
+
+    let months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
+    let a: [i32; 5] = [1, 2, 3, 4, 5];
 }
