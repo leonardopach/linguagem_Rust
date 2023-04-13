@@ -8,5 +8,8 @@ edition = "2021"
 
 [dependencies]
 actix-web = "4.3.1"
-yew = "0.19.3"
+fltk = "1.4.0"
+fltk-flex = "0.2.1"
+fltk-theme = "0.7.0"
+
 
