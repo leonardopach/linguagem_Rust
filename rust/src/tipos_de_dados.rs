@@ -1,3 +1,4 @@
+use std::io::stdin;
 pub fn tipos_de_dados() {
     let guess: u32 = "42".parse().expect("Não é um número");
     println!("{}", guess);
@@ -83,4 +84,33 @@ pub fn tipos_de_dados() {
         "December",
     ];
     let a: [i32; 5] = [1, 2, 3, 4, 5];
+
+    let converte: i32 = "42".parse().expect("Error parsing");
+
+    println!("{converte}");
+    println!("{}", converte + 1);
+
+    let (nome, idade, profissao) = ("leo", 25, "QA");
+
+    println!("{} {} {}", nome, idade, profissao);
+
+    let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    let mut vetor = vec![1, 2, 3, 4, 5, 6, 7];
+
+    println!("{:?}", array);
+    println!("{}", array[4]);
+    vetor.push(10);
+    println!("{:?}", vetor);
+
+    let array = [1, 2, 3, 4, 5, 6, 7];
+
+    let mut input = String::new();
+
+    stdin().read_line(&mut input).expect("Erro");
+
+    let converte: usize = input.trim().parse().expect("Erro no parser");
+
+    let element = array[converte];
+
+    println!("{}", element);
 }
