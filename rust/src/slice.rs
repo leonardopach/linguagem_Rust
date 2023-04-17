@@ -20,5 +20,29 @@ pub fn slice() {
     let nome = &string[0..7];
     let sobrenome = &string[8..16];
 
-    println!("{}, {}", nome, sobrenome)
+    println!("{}, {}", nome, sobrenome);
+    let s = String::from("Leonard pacheco");
+    println!("{}", primeira_palavra(&s));
+
+    let texto = &s[0..7];
+    let longo = &s[7..];
+    println!("{texto}");
+    println!("{longo}");
+
+    let a = [1, 2, 3, 4, 5];
+
+    let minha_string = String::from("texto longo");
+
+    let palavra = primeira_palavra(&minha_string[..]);
+    println!("{palavra}");
+    let minha_string_literal = "texto longo";
+
+    let palavra = primeira_palavra(&minha_string_literal[..]);
+    println!("{palavra}");
+
+    let palavra = primeira_palavra(minha_string_literal);
+    println!("{palavra}");
+
+    let slice = &a[1..3];
+    println!("{:?}", slice);
 }
