@@ -7,6 +7,25 @@ struct User {
     active: bool,
 }
 
+struct Calculator {
+    x: i32,
+    y: i32,
+}
+
+impl Calculator {
+    fn new(x: i32, y: i32) -> Self {
+        Self { x, y }
+    }
+
+    fn add(&self) -> i32 {
+        self.x + self.y
+    }
+
+    fn sub(&self) -> i32 {
+        self.x - self.y
+    }
+}
+
 #[derive(Debug)]
 struct Color(i32, i32, i32);
 #[derive(Debug)]
@@ -52,4 +71,23 @@ pub fn print_user() {
     let (num, string) = (10, "hello");
 
     println!("{}, {1}", num, string);
+
+    let mut valor1 = String::new();
+    let mut valor2 = String::new();
+
+    println!("Digite um valor: ");
+    std::io::stdin().read_line(&mut valor1).unwrap();
+    println!("Digite outro valor: ");
+    std::io::stdin().read_line(&mut valor2).unwrap();
+
+    let valor1: i32 = valor1.trim().parse().expect("Erro na conversão de valores");
+
+    let valor2: i32 = match valor2.trim().parse() {
+        Ok(num) => num,
+        Err(_) => panic!("Erro na conversão de valores"),
+    };
+    let calc = Calculator::new(valor1, valor2);
+
+    println!("Somar {}", Calculator::add(&calc));
+    println!("Sub {}", Calculator::sub(&calc));
 }
