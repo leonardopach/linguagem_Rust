@@ -1,1 +1,1 @@
-/home/leonardopach/linguagem_Rust/rust/target/debug/librust.rlib: /home/leonardopach/linguagem_Rust/rust/src/lib.rs /home/leonardopach/linguagem_Rust/rust/src/network/mod.rs /home/leonardopach/linguagem_Rust/rust/src/network/server.rs
+C:\Users\l.pacheco\Desktop\linguagem_Rust\rust\target\debug\librust.rlib: C:\Users\l.pacheco\Desktop\linguagem_Rust\rust\src\lib.rs C:\Users\l.pacheco\Desktop\linguagem_Rust\rust\src\network\mod.rs C:\Users\l.pacheco\Desktop\linguagem_Rust\rust\src\network\server.rs
